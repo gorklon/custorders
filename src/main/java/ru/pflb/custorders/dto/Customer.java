@@ -15,6 +15,7 @@ public class Customer {
     private String lastName;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "customer_id")
     private List<Orders> orders=new ArrayList<>();
 
     protected Customer() {}

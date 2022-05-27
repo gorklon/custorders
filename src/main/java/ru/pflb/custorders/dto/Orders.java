@@ -13,7 +13,6 @@ public class Orders {
     private Timestamp createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     public Customer getCustomer() {
